@@ -1,0 +1,9 @@
+POST http://localhost:3001/api/products
+Content-Type: application/json
+
+{
+    "name": "apple",
+    "description": "lLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla massa ex, ut sagittis ipsum semper nec. Duis condimentum diam nec nisi molestie",
+    "image": "image",
+    "price": "$10"
+}
