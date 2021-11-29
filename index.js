@@ -1,35 +1,33 @@
 const express = require('express')
 const app = express()
-app.use(express.json())
+const cors = require('cors')
 
+app.use(express.json())
+app.use(cors())
 
 let products = [
  {
     id: 1,
-    name: 'apple',
+    name: 'Yellow sport set',
     description: 'lLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla massa ex, ut sagittis ipsum semper nec. Duis condimentum diam nec nisi molestie',
-    image: 'image',
+    image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=420&q=80',
     price: '$10'
  },
  {
     id: 2,
-    name: 'banana',
+    name: 'Blue winter jacket',
     description: 'lLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla massa ex, ut sagittis ipsum semper nec. Duis condimentum diam nec nisi molestie',
-    image: 'image',
+    image: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
     price: '$15'
  },
  {
     id: 3,
-    name: 'kiwi',
+    name: 'Brown leather jacket',
     description: 'lLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla massa ex, ut sagittis ipsum semper nec. Duis condimentum diam nec nisi molestie',
-    image: 'image',
+    image: 'https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=495&q=80',
     price: '$23'
  },
 ]
-
-app.get('/', (request, response) => {
-    response.send('<h1>api</h1>')
-})
 
 //get all products
 app.get('/api/products', (request, response) => {
@@ -63,7 +61,7 @@ app.post('/api/products', (request, response) => {
         price: product.price
     }
 
-    products = products.concat(newProduct)
+    products = products.concat(newProduct) //add the new product to the list
     response.json(newProduct)
 })
 
