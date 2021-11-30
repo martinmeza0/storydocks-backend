@@ -29,6 +29,10 @@ let products = [
  },
 ]
 
+app.get('/', (request, response) => {
+    response.send('<h1>API products<h1/>')
+  })
+
 //get all products
 app.get('/api/products', (request, response) => {
     response.json(products)
