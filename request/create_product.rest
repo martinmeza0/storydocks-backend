@@ -2,8 +2,8 @@ POST http://localhost:3001/api/products
 Content-Type: application/json
 
 {
-    "name": "apple",
+    "name": "white jacket kpop",
     "description": "lLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla massa ex, ut sagittis ipsum semper nec. Duis condimentum diam nec nisi molestie",
-    "image": "image",
+    "image": "https://previews.123rf.com/images/korobkova/korobkova1507/korobkova150700048/42194237-beautiful-brunette-model-in-fashion-clothes-posing-in-studio-wearing-coat-handbag-red-shoes.jpg",
     "price": "$10"
 }

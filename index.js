@@ -57,6 +57,7 @@ app.post('/api/products', (request, response) => {
     const newProduct = {
         id: maxId +1,
         name: product.name,
+        description: product.description,
         image: product.image,
         price: product.price
     }
@@ -64,7 +65,6 @@ app.post('/api/products', (request, response) => {
     products = products.concat(newProduct) //add the new product to the list
     response.json(newProduct)
 })
-
 
 const PORT = 3001
 app.listen(PORT, () => {
