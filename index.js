@@ -30,7 +30,7 @@ let products = [
 ]
 
 app.get('/', (request, response) => {
-    response.send('<h1>API products<h1/>')
+    response.write('<h1>API products<h1/>')
     response.write('<a href="./api/products">View products<a/>')
 
   })
